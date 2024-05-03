@@ -1,5 +1,7 @@
 package com.santander.interfaceset.OpBasic;
 
+import java.util.Objects;
+
 public class Guest {
 
     private String name;
@@ -24,6 +26,19 @@ public class Guest {
             "Guest{" + "name='" + name + '\'' +
             ", inviteCode='" + inviteCode + '\'' + '}'
         );
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Guest guest = (Guest) o;
+        return inviteCode == guest.inviteCode;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(inviteCode);
     }
 }
 

@@ -10,6 +10,7 @@ public class Main {
             guestsCollection.addGuest("Xandy", 4468);
             guestsCollection.addGuest("Melina", 9000);
             guestsCollection.addGuest("Ally", 4466);
+            guestsCollection.addGuest("Ally", 4466);
 
             System.out.println(guestsCollection.countGuests());
             guestsCollection.showAll();
