@@ -17,7 +17,23 @@ public class StudentsManager {
         this.studentSet.remove(student);
     }
 
-    public Set<Student> searchByName(String name) {
+    public void showAll() {
+        for(Student s: this.studentSet) System.out.println(s);
+    }
+
+    public Set<Student> searchByName(String name) throws RuntimeException {
         if(this.studentSet.isEmpty()) throw new RuntimeException("Students list empty.");
+        Set<Student> findedByName = new HashSet<>();
+        for(Student s: this.studentSet) if(s.getName().startsWith(name)) findedByName.add(s);
+        return findedByName;
+    }
+
+    public Set<Student> searchByGradeRange(double start, double finish) throws RuntimeException {
+        if(this.studentSet.isEmpty()) throw new RuntimeException("Students list empty.");
+        Set<Student> findedByGradeRange = new HashSet<>();
+        for(Student s: this.studentSet) if(s.getGrade() >= start && s.getGrade() <= finish) findedByGradeRange.add(s);
+        return findedByGradeRange;
     }
 }
+
+
