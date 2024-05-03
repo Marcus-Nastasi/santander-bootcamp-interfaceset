@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         try {
             testGuest();
-            //testPhonebook();
-            //testStore();
+            testPhonebook();
+            testStore();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -64,7 +64,7 @@ public class Main {
         productStorage.addProduct("d", 4, 32, 8.99);
         productStorage.addProduct("e", 5, 110, 1.99);
 
-        System.out.println("--- search by name ---");
+        System.out.println("\n--- search by name ---");
         for (Product p : productStorage.searchByName("a")) System.out.println(p);
 
         System.out.println("\n--- search by range ---");
