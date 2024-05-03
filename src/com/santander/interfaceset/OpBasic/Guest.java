@@ -12,19 +12,11 @@ public class Guest {
         this.inviteCode = inviteCode;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getInviteCode() {
-        return inviteCode;
-    }
-
     @Override
     public String toString() {
         return(
-            "Guest{" + "name='" + name + '\'' +
-            ", inviteCode='" + inviteCode + '\'' + '}'
+                "Guest{" + "name='" + name + '\'' +
+                        ", inviteCode='" + inviteCode + '\'' + '}'
         );
     }
 
@@ -39,6 +31,14 @@ public class Guest {
     @Override
     public int hashCode() {
         return Objects.hash(inviteCode);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getInviteCode() {
+        return inviteCode;
     }
 }
 
