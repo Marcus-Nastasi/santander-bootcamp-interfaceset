@@ -1,5 +1,7 @@
 package com.santander.interfaceset.searchInSet;
 
+import java.util.Objects;
+
 public class Contact {
 
     private String name;
@@ -10,12 +12,17 @@ public class Contact {
         this.tel = tel;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contact contact = (Contact) o;
+        return Objects.equals(name, contact.name);
     }
 
-    public int getTel() {
-        return tel;
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 
     @Override
@@ -24,6 +31,18 @@ public class Contact {
             "Contact{" + "name='" + name + '\'' +
             ", tel=" + tel + '}'
         );
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getTel() {
+        return tel;
+    }
+
+    public void setTel(int tel) {
+        this.tel = tel;
     }
 }
 
