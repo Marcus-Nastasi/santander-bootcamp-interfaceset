@@ -3,9 +3,9 @@ package com.santander.interfaceset.OpBasic;
 public class Guest {
 
     private String name;
-    private String inviteCode;
+    private int inviteCode;
 
-    public Guest(String name, String inviteCode) {
+    public Guest(String name, int inviteCode) {
         this.name = name;
         this.inviteCode = inviteCode;
     }
@@ -14,7 +14,7 @@ public class Guest {
         return name;
     }
 
-    public String getInviteCode() {
+    public int getInviteCode() {
         return inviteCode;
     }
 
