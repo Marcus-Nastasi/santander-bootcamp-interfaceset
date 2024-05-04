@@ -27,6 +27,14 @@ public class Student {
         return Objects.hash(name, id);
     }
 
+    @Override
+    public String toString() {
+        return(
+            "Student{" + "name='" + name + '\'' +
+            ", id=" + id + ", grade=" + grade + '}'
+        );
+    }
+
     public String getName() {
         return name;
     }

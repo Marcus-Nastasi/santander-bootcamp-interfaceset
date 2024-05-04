@@ -17,7 +17,8 @@ public class StudentsManager {
         this.studentSet.remove(student);
     }
 
-    public void showAll() {
+    public void showAll() throws RuntimeException {
+        if(this.studentSet.isEmpty()) throw new RuntimeException("Students list empty.");
         for(Student s: this.studentSet) System.out.println(s);
     }
 

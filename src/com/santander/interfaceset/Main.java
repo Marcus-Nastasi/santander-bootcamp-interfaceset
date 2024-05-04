@@ -1,6 +1,7 @@
 package com.santander.interfaceset;
 
 import com.santander.interfaceset.OpBasic.GuestsCollection;
+import com.santander.interfaceset.Ordenation.College.StudentsManager;
 import com.santander.interfaceset.Ordenation.Store.Product;
 import com.santander.interfaceset.Ordenation.Store.ProductStorage;
 import com.santander.interfaceset.searchInSet.Contact;
@@ -12,6 +13,7 @@ public class Main {
             testGuest();
             testPhonebook();
             testStore();
+            testStudent();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -72,6 +74,22 @@ public class Main {
 
         System.out.println("\n--- search all ---");
         for (Product p : productStorage.getAll()) System.out.println(p);
+    }
+
+    public static void testStudent() {
+        StudentsManager studentsManager = new StudentsManager();
+        System.out.println("---- show all students ----");
+        //studentsManager.showAll();
+
+        studentsManager.addStudent("Marc 1", 122, 9.7);
+        studentsManager.addStudent("Marc 2", 120, 7.7);
+        studentsManager.addStudent("Jeff", 123, 2.2);
+        studentsManager.addStudent("Enzo", 124, 6.3);
+        studentsManager.showAll();
+        System.out.println("\n--- search by name ---");
+        System.out.println(studentsManager.searchByName("Marc"));
+        System.out.println("\n--- search by grade range ---");
+        System.out.println(studentsManager.searchByGradeRange(3.0, 10.0));
     }
 }
 
