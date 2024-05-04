@@ -15,8 +15,8 @@ public class Guest {
     @Override
     public String toString() {
         return(
-                "Guest{" + "name='" + name + '\'' +
-                        ", inviteCode='" + inviteCode + '\'' + '}'
+            "Guest{" + "name='" + name + '\'' +
+            ", inviteCode='" + inviteCode + '\'' + '}'
         );
     }
 
