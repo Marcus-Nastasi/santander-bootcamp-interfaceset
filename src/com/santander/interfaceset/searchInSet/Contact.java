@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Contact {
 
-    private String name;
+    private final String name;
     private int tel;
 
     public Contact(String name, int tel) {
