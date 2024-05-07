@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class Product {
 
-    private String name;
-    private int id;
-    private int quantity;
-    private double price;
+    private final String name;
+    private final int id;
+    private final int quantity;
+    private final double price;
 
     public Product(String name, int id, int quantity, double price) {
         this.name = name;
