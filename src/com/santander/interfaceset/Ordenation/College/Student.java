@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Student {
 
-    private String name;
-    private int id;
-    private double grade;
+    private final String name;
+    private final int id;
+    private final double grade;
 
     public Student(String name, int id, double grade) {
         this.name = name;

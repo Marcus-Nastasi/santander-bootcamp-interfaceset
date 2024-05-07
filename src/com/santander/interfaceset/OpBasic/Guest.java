@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Guest {
 
-    private String name;
-    private int inviteCode;
+    private final String name;
+    private final int inviteCode;
 
     public Guest(String name, int inviteCode) {
         this.name = name;
